@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "es2022",
+        "moduleResolution": "bundler",
+        "resolveJsonModule": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "composite": true,
+        "rootDir": "src",
+        "outDir": "dist",
+        "baseUrl": "src",
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true,
+        "jsx": "react",
+        "paths": {
+        },
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "include": [
+        "src/**/*"
+    ]
+}
