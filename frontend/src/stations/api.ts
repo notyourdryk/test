@@ -12,7 +12,7 @@ export async function getStations(): Promise<Station[]> {
 }
 
 export async function updateTags(id: Station['id'], tags: Station['tags']) {
-    await fetch('/api/tag', {
+    await fetch('/api/updateTags', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

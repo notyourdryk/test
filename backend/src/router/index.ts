@@ -13,7 +13,7 @@ router
             throw error;
         }
     })
-    .post('/tag', async (req, res) => {
+    .post('/updateTags', async (req, res) => {
         const { stationId, tags } = req.body;
         if (!stationId || !tags) {
             res.status(400).send('station id or tags not present');
