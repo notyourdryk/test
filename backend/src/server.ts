@@ -1,15 +1,15 @@
 import express from 'express';
-import log from './middleware/log.js';
-import headers from './middleware/headers.js';
+import { log, headers, finalErrorHandler } from './middleware';
 import router from './router/index.js';
 
+const PORT = 3000;
 const app = express();
 
-app.use(log);
-app.use(headers);
-app.use(router);
-
-const PORT = 3000;
-app.listen(PORT, () => {
+app.use(log)
+    .use(headers)
+    .use(express.json())
+    .use(router)
+    .use(finalErrorHandler)
+    .listen(PORT, () => {
     console.debug(`Listening at http://localhost:${PORT}`);
 });
